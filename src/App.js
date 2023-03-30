@@ -1,5 +1,6 @@
 import './App.css';
 import "./navbar.css";
+import "./home.css";
 import Navbar from './Navbar';
 import Home from './Home';
 import Footer from './Footer';
@@ -47,11 +48,13 @@ const searchPokemon = () => {
       <Navbar />
       
                
+      <div className="home"> 
+         <h2 className="home-title pt-5">Kies je Pokemon</h2>
+        <div className="h2"></div>
 
-        
-        <Home />
-        <div className="displaySection">
-          {!pokemonChosen ? (<h1>Typ hier de naam van je favoriete pokemon!</h1>) : (
+        <div className="row pt">
+            <div className="col"> <div className="displaySection">
+          {!pokemonChosen ? (<h1></h1>) : (
             <>
           <h1>{pokemon.name}</h1>
           <img alt="" src={pokemon.img}/>
@@ -59,9 +62,21 @@ const searchPokemon = () => {
           <h3>Defense: {pokemon.defense}</h3>
 
           </>
+          
           )}
-          <input type="text" onChange={(event => {setPokemonName(event.target.value)})}></input>
-                <button onClick={searchPokemon}>search database</button>
+          <div className="col"><input type="text" onChange={(event => {setPokemonName(event.target.value)})}></input></div>
+          
+          <div className="col pt-3"><button onClick={searchPokemon}>search database</button></div>
+          </div></div>
+          </div>
+            <div className="col"><h2 className='home-title pt-5'>Of gebruik de random generator!</h2></div>
+
+        
+        
+        
+        
+       
+          
         </div>
       <Footer />
       </div>
