@@ -16,25 +16,39 @@ const [pokemonChosen, setPokemonChosen] = useState(false);
 const [pokemon, setPokemon] = useState({
       name: pokemonName,
       species: "",
+      type: "",
+      speed: "",
       img: "",
+      imgShiny: "",
       hp: "",
       attack: "",
       defense: "",
-      type: "",
+      specialAttack: "",
+      specialDefense: "",
+      speed: "",
+
 });
 
 // get from api
 const searchPokemon = () => {
   Axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`).then((response)=>{
+    console.log(response);
     setPokemon({
       name: pokemonName,
       species: response.data.species.name,
+      type: response.data.types[0].type.name,
       img: response.data.sprites.front_default,
+      imgShiny: response.data.sprites.front_shiny,
       hp: response.data.stats[0].base_stat,
       attack: response.data.stats[1].base_stat,
       defense: response.data.stats[2].base_stat,
-      type: response.data.types[0].type.name,
+      specialAttack: response.data.stats[3].base_stat,
+      specialDefense: response.data.stats[4].base_stat,
+      speed: response.data.stats[5].base_stat,
 
+
+     
+      
     });
     setPokemonChosen(true);
   }
@@ -54,26 +68,47 @@ const searchPokemon = () => {
 
         <div className="row pt">
             <div className="col"> <div className="displaySection">
-          {!pokemonChosen ? (<h1></h1>) : (
-            <>
-          <h1>{pokemon.name}</h1>
-          <img alt="" src={pokemon.img}/>
-          <h3>Species: {pokemon.species}</h3>
-          <h3>Defense: {pokemon.defense}</h3>
-
-          </>
-          
-          )}
+         
+         
           <div className="col"><input type="text" onChange={(event => {setPokemonName(event.target.value)})}></input></div>
           
           <div className="col pt-3"><button onClick={searchPokemon}>search database</button></div>
           </div></div>
           </div>
             <div className="col"><h2 className='home-title pt-5'>Of gebruik de random generator!</h2></div>
+            </div>
+            </div>
 
-        
-        
-        
+            <div className="container pt-5">
+              <div className="row">
+              <div className="col-3">
+                <ul className="pokemon-info">
+                  <li className="pokemon-name">{pokemon.name}</li>
+                  <li className="pokemon-image"><img height="200" alt="" src={pokemon.img}/></li>
+                  <li className="pokemon-image-shiny"><img height="200" alt="" src={pokemon.imgShiny}/></li>
+
+                  <li className="pokemon-species">Hitpoints: {pokemon.hp}</li>
+
+
+
+              </ul>
+              </div>
+              <div className="col-3">
+                <ul className="pokemon-stats">
+                  <li className="pokemon-species">Species: {pokemon.species}</li>
+                  <li className="pokemon-attack">Attack: {pokemon.attack}</li>
+                  <li className="pokemon-defense">Defense: {pokemon.defense}</li>
+                  <li className="pokemon-special-attack">Special Attack: {pokemon.specialAttack}</li>
+                  <li className="pokemon-special-defense">Special Defense: {pokemon.specialDefense}</li>
+                  <li className="pokemon-speed">Speed: {pokemon.speed}</li>
+                  <li className="pokemon-type">Type: {pokemon.type}</li>
+
+
+
+
+
+               </ul>
+              </div>
         
        
           
