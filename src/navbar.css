@@ -1,0 +1,7 @@
+nav.navbar.navbar-expand-lg, a.nav-link {
+    background-color: #FFCC00;
+    color: white;
+}
+a.navbar-brand {
+    margin-left: 15px;
+}
