@@ -12,6 +12,10 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+body {
+  background-image: url(https://pokemondeal.com/wp-content/uploads/2020/12/Pokeball-wallpaper.jpg)!important;
+  background-size: contain;
+};
 
 .App-header {
   background-color: #282c34;
