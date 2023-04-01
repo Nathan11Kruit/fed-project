@@ -9,13 +9,7 @@ import Footer from './Footer';
 import { useState } from 'react'; 
 import Axios from 'axios';
 
-function App() {
- 
-var random = random;
-
-
-
-
+function App() { 
   function randomPokemon(min,max) {
     return Math.floor(Math.random() * (max - min + 1) + min)  };
     const [pokemonRandom, setPokemonRandom] = useState("");
@@ -43,15 +37,12 @@ var random = random;
     );    
   }; 
   function shinySwitch(){
-    let id = {random};
-
     let displayImage = document.getElementById('pokemon-img')
-    if(displayImage.src.match(`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon'${random}'` + `pngpokemon.img`)){
-      displayImage.src = (`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon'${random}'` + `pngpokemon.img`)
-      console.log(`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${random}` + `/pngpokemon.img`);
-
+    if(displayImage.src.match(`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon${pokemonRandom}` + `/pngpokemon.img`)){
+      displayImage.src = (`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon${pokemonRandom}` + `/pngpokemon.img`)
+      console.log(`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonRandom}` + `/pngpokemon.img`);
     } else {
-      displayImage.src = (`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/'${random}'` + `pngpokemon.img`)
+      displayImage.src = (`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonRandom}` + `/pngpokemon.img`)
     }
   }
 
