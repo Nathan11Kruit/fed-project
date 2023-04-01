@@ -46,12 +46,12 @@ var random = random;
     let id = {random};
 
     let displayImage = document.getElementById('pokemon-img')
-    if(displayImage.src.match(`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon'${id}'` + `pngpokemon.img`)){
-      displayImage.src = (`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon'${id}'` + `pngpokemon.img`)
-      console.log(`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}` + `/pngpokemon.img`);
+    if(displayImage.src.match(`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon'${random}'` + `pngpokemon.img`)){
+      displayImage.src = (`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon'${random}'` + `pngpokemon.img`)
+      console.log(`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${random}` + `/pngpokemon.img`);
 
     } else {
-      displayImage.src = (`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/'${id}'` + `pngpokemon.img`)
+      displayImage.src = (`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/'${random}'` + `pngpokemon.img`)
     }
   }
 
