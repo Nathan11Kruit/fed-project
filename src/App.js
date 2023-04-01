@@ -116,7 +116,7 @@ const searchPokemon = () => {
             </div>
             <div className="container pokemon-pokedex pb-5">
               <div className="row pokemon-pokedex-titel pt-2 pb-2">
-                <div className="col"><h3 className="text-center">Gekozen Pokemon</h3></div>
+                <div className="col"><h3 className="text-center chosen-pokemon-title">Gekozen Pokemon</h3></div>
               </div>
               <div className="row">
                 <div className="col-3"></div>

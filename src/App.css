@@ -15,7 +15,7 @@
 body {
   background-image: url(https://pokemondeal.com/wp-content/uploads/2020/12/Pokeball-wallpaper.jpg)!important;
   background-size: contain;
-};
+}
 
 .App-header {
   background-color: #282c34;
@@ -40,6 +40,9 @@ body {
     transform: rotate(360deg);
   }
 }
+.chosen-pokemon-title {
+  text-shadow: 2px 1px black;
+}
 .pokemon-pokedex {
   background-color: #FFCC00;
 }
@@ -47,7 +50,7 @@ body {
   color: #fff;
   background-color: #0075BE;
 }
-.pokemon-info, .pokemon-stats, .pokemon-info ul, .pokemon-stats ul {
+.pokemon-info, .pokemon-stats, .pokemon-info ul, .pokemon-stats ul  {
     text-transform: capitalize;
     list-style: none!important;
     border-radius: 25px;
