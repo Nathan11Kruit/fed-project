@@ -16,7 +16,6 @@ body {
   background-image: url(https://pokemondeal.com/wp-content/uploads/2020/12/Pokeball-wallpaper.jpg)!important;
   background-size: contain;
 }
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -27,7 +26,9 @@ body {
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
+.switch {
+  margin-left: 15px;
+}
 .App-link {
   color: #61dafb;
 }

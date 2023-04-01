@@ -38,11 +38,18 @@ function App() {
   }; 
   function shinySwitch(){
     let displayImage = document.getElementById('pokemon-img')
-    if(displayImage.src.match(`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon${pokemonRandom}` + `/pngpokemon.img`)){
-      displayImage.src = (`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon${pokemonRandom}` + `/pngpokemon.img`)
-      console.log(`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonRandom}` + `/pngpokemon.img`);
+    if(displayImage.src.match(`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon${pokemonRandom}` + `.png`)){
+      displayImage.src = (`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonRandom}` + `.png`)
     } else {
-      displayImage.src = (`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonRandom}` + `/pngpokemon.img`)
+      displayImage.src = (`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/${pokemonRandom}` + `.png`)
+    }
+  }
+  function normalSwitch(){
+    let displayImage = document.getElementById('pokemon-img')
+    if(displayImage.src.match(`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/${pokemonRandom}` + `.png`)){
+      displayImage.src = (`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonRandom}` + `.png`)
+    } else {
+      displayImage.src = (`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonRandom}` + `.png`)
     }
   }
 
@@ -109,8 +116,8 @@ const searchPokemon = () => {
                 <div className="col-3 mt-5 pokemon-info">
                   <ul className="pt-2">
                     <li className="pokemon-info-list-title pokemon-species"><h3 className='text-center'>{pokemon.name}</h3></li>
-                    <li className="pokemon-info-list-item pokemon-image"><img id="pokemon-img" className='mx-auto d-block' height="200" alt="" src={pokemon.img}/><img height="20" alt="" src={pokemon.imgShiny}/></li>
-                    <li className="pokemon-info-list-item pokemon-image-shiny"><button className="switch" onClick={shinySwitch}></button></li>
+                    <li className="pokemon-info-list-item pokemon-image"><img id="pokemon-img" className='mx-auto d-block' height="200" alt="" src={pokemon.img}/></li>
+                    <li className="pokemon-info-list-item pokemon-image-shiny mb-4 mx-auto text-center img-fluid"><button className="switch btn btn-primary" onClick={shinySwitch}>Shiny</button><button className="switch btn btn-info" onClick={normalSwitch}>Normal</button></li>
                     <li className="pokemon-species text-center">Hitpoints: {pokemon.hp}</li>
                   </ul>
                 </div>
