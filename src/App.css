@@ -31,17 +31,20 @@ body {
 .App-link {
   color: #61dafb;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.landing-image {
+  height: 600px;
+}
+.pokemon-name-input {
+  width: 250px;
 }
 .chosen-pokemon-title {
   text-shadow: 2px 1px black;
+}
+.row.pokemon-pokedex-titel.pt-2.pb-2 {
+  box-shadow: 0 4px 2px -4px black;  
+}
+.container.pokemon-pokedex.pb-5 {
+  box-shadow: 0 4px 2px -4px black;  
 }
 .pokemon-pokedex {
   background-color: #FFCC00;
