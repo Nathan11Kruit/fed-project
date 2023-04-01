@@ -3,7 +3,7 @@ const Footer = () => {
         <>
         <div className="container footer">
         <div className="row">
-            <div className="col-2"></div>
+            <div className="col-3"></div>
             <div className="col-2 mt-2 text-center">Socials:
              <div className="row icons mt-4">
                 <div className="col-1">
@@ -26,8 +26,22 @@ const Footer = () => {
                   <div className="col-1"></div>
 
                 </div>
+
              </div>
-            <div className="col-4 mt-2 text-center">Andere Pokemon plekken</div>
+             <div className="col-1"></div>
+
+            <div className="col-4 mt-2 "><h5 className="text-center">Andere Pokemon plekken</h5>
+            <ul className="pokemon-places text-end">
+                <li className="pokemon-places-list-item">Pokemon.com</li>
+                <li className="pokemon-places-list-item">Dikke turbo</li>
+                <li className="pokemon-places-list-item">Floepie</li>
+                <li className="pokemon-places-list-item">Doebie</li>
+
+            </ul>
+            
+            
+            </div>
+
 
         </div></div>
         </>
