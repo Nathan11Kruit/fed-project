@@ -2,6 +2,19 @@ nav.navbar.navbar-expand-lg, a.nav-link {
     background-color: #FFCC00;
     color: white;
 }
+.navbar {
+    box-shadow: 0 4px 2px -4px black;
+
+}
 a.navbar-brand {
     margin-left: 15px;
+}
+@media (min-width: 768px) {
+.navbar-brand.abs
+    {
+        position: absolute;
+        width: auto;
+        left: 46%;
+        text-align: center;
+    }
 }
