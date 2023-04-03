@@ -91,6 +91,20 @@ body {
 .btn-add-to-team {
   width: 175px;
 }
-.chosen-pokemons-name {
+.pokemon-card {
+  background-color: #7777FF;
+  border-radius: 15px;
+  border: 4px solid black;
+}
+.pokemon-card-name {
   text-transform: capitalize;
+  color: #fff;
+  text-shadow: 2px 1px black;
+}
+.pokemon-card-image {
+  width: 106%;
+  height: 80%;
+}
+.pokemon-card-container {
+  background-color: #ffcb057d;
 }

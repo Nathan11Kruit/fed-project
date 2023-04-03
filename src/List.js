@@ -59,7 +59,6 @@ function randomNewPokemon() {
         specialDefense: response.data.stats[4].base_stat,
         speed: response.data.stats[5].base_stat,
       });
-      setPokemonList([...pokemonList, pokemon]);
     });
   }
 

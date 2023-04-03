@@ -4,7 +4,7 @@ nav.navbar.navbar-expand-lg, a.nav-link {
 }
 .navbar {
     box-shadow: 0 4px 2px -4px black;
-
+    height: 60px;
 }
 a.navbar-brand {
     margin-left: 15px;
