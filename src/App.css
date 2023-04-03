@@ -10,6 +10,10 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+/* extra margins and padding*/
+.mt-6 {
+  margin-top: 133px; 
+}
 body {
   background-image: url(https://pokemondeal.com/wp-content/uploads/2020/12/Pokeball-wallpaper.jpg)!important;
   background-size: contain;
@@ -26,6 +30,7 @@ body {
 }
 .switch {
   margin-left: 15px;
+  width: 80px;
 }
 .App-link {
   color: #61dafb;
@@ -33,11 +38,18 @@ body {
 .landing-image {
   height: 600px;
 }
+.landing-image-text-field {
+  background-color: #3399FF;
+  border-radius: 0px 25px 25px 0px;
+  border: 2px solid #FFCB05;
+  padding: 10px;
+}
 .pokemon-name-input {
   width: 250px;
 }
 .chosen-pokemon-title {
   text-shadow: 2px 1px black;
+  margin: 0;
 }
 .row.pokemon-pokedex-titel.pt-2.pb-2 {
   box-shadow: 0 4px 2px -4px black;  
@@ -46,11 +58,11 @@ body {
   box-shadow: 0 4px 2px -4px black;  
 }
 .pokemon-pokedex {
-  background-color: #FFCC00;
+  background-color: #FFCB05;
 }
 .pokemon-pokedex-titel {
   color: #fff;
-  background-color: #0075BE;
+  background-color: #3399FF;
 }
 .pokemon-info, .pokemon-stats, .pokemon-info ul, .pokemon-stats ul  {
     text-transform: capitalize;
@@ -66,9 +78,12 @@ body {
   background-color: #D5A100;
 }
 .pokemon-stats {
-    background-color: #FB1B1B;
+    background-color: #FF4422;
     text-align: left;    
 }
 .pokemon-stats-list-item {
   padding: 10px 1px 1px 40px;
+}
+.btn-primary {
+  background-color: #7777FF!important;
 }
