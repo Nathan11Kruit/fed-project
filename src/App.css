@@ -39,9 +39,10 @@ body {
   height: 600px;
 }
 .landing-image-text-field {
-  background-color: #3399FF;
+  background-color: #3399ffb5;
   border-radius: 0px 25px 25px 0px;
   border: 2px solid #FFCB05;
+  border-left: none;
   padding: 10px;
 }
 .pokemon-name-input {
@@ -86,4 +87,10 @@ body {
 }
 .btn-primary {
   background-color: #7777FF!important;
+}
+.btn-add-to-team {
+  width: 175px;
+}
+.chosen-pokemons-name {
+  text-transform: capitalize;
 }
