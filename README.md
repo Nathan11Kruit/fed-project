@@ -2,6 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+To run this app on your system you need to install node.js found at nodeje.org
+
+The project was made with the help of the Bootstrap grid with react supporting all the functions.
+
 ## Available Scripts
 
 In the project directory, you can run:
