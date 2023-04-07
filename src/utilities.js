@@ -5,9 +5,9 @@ function getNumberFromImageSource(imageSource) {
 }
 
 function shinySwitch() {
-  let displayImage = document.getElementById('pokemon-img')
-  const imageSource = displayImage.src;
-  const numberFromImageSource = getNumberFromImageSource(imageSource);
+  let displayImage = document.getElementById('pokemon-img') // find image with ID pokemon-img
+  const imageSource = displayImage.src; // get image src
+  const numberFromImageSource = getNumberFromImageSource(imageSource); // check if image source is shiny or not and change it based on the result.
   if(displayImage.src.match(`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${numberFromImageSource}` + `.png`)){
     displayImage.src = (`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/${numberFromImageSource}` + `.png`)
   } else {
@@ -15,52 +15,52 @@ function shinySwitch() {
   }    }
 
 function normalSwitch() {
-  let displayImage = document.getElementById('pokemon-img')
-  const imageSource = displayImage.src;
-  const numberFromImageSource = getNumberFromImageSource(imageSource);
+  let displayImage = document.getElementById('pokemon-img') // find image with ID pokemon-img
+  const imageSource = displayImage.src; // get image src
+  const numberFromImageSource = getNumberFromImageSource(imageSource); // check if image source is shiny or not and change it based on the result.
   if(displayImage.src.match(`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/${numberFromImageSource}` + `.png`)){
     displayImage.src = (`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${numberFromImageSource}` + `.png`)
   } else {
     displayImage.src = (`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${numberFromImageSource}` + `.png`)
   }}
-  function getColorFromType(type) {
+  function getColorFromType(type) { // check for type, change cardbackground based on type.
     switch (type) {
       case "normal":
-        return "#A8A878";
+        return "#95afc0";
       case "fire":
-        return "#F08030";
+        return "#f0932b";
       case "water":
-        return "#6890F0";
+        return "#0190FF";
       case "grass":
-        return "#78C850";
+        return "#00b894";
       case "electric":
-        return "#F8D030";
+        return "#fed330";
       case "ice":
-        return "#98D8D8";
+        return "#74b9ff";
       case "fighting":
-        return "#C03028";
+        return "#30336b";
       case "poison":
-        return "#A040A0";
+        return "#6c5ce7";
       case "ground":
-        return "#E0C068";
+        return "#EFB549";
       case "flying":
-        return "#A890F0";
+        return "#81ecec";
       case "psychic":
-        return "#F85888";
+        return "#a29bfe";
       case "bug":
-        return "#A8B820";
+        return "#26de81";
       case "rock":
-        return "#B8A038";
+        return "#2d3436";
       case "ghost":
-        return "#705898";
+        return "#a55eea";
       case "dragon":
-        return "#7038F8";
+        return "#ffeaa7";
       case "dark":
         return "#705848";
       case "steel":
         return "#B8B8D0";
       case "fairy":
-        return "#EE99AC";
+        return "#FF0069";
       default:
         return "#68A090";
     }

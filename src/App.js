@@ -1,67 +1,47 @@
 import './App.css';
 import "./navbar.css";
 import "./footer.css";
-
 import Navbar from './Navbar';
-import { getNumberFromImageSource, shinySwitch, normalSwitch, getColorFromType } from './utilities.js';
-
 import Footer from './Footer';
+import { getNumberFromImageSource, shinySwitch, normalSwitch, getColorFromType } from './utilities';
 import { useState } from 'react'; 
 import Axios from 'axios';
-
-
 
 function App() { 
 
   const [showTeam, setShowTeam] = useState(false);
   const [pokemonList, setPokemonList] = useState([]);
 
-    const [pokemonRandom, setPokemonRandom] = useState("");
+  const [pokemonRandom, setPokemonRandom] = useState("");
 
-    function addToTeam(){
-      if (pokemon.name) {
-        setPokemonList([...pokemonList, pokemon]);
-        setPokemon(pokemon);
-        setShowTeam(true);
-      }
-    }  
-    function randomNewPokemon() { 
-      const min = 1;
-      const max = 1008;
-      const random = Math.floor(Math.random() * (max - min + 1)) + min;
-      setPokemonRandom(random);
-      Axios.get(`https://pokeapi.co/api/v2/pokemon/${random}`).then((response) => {
-        console.log(pokemonList)
-        setPokemon({
-          name: response.data.name,
-          species: response.data.species.name,
-          type: response.data.types[0].type.name,
-          img: response.data.sprites.front_default,
-          imgShiny: response.data.sprites.front_shiny,
-          hp: response.data.stats[0].base_stat,
-          attack: response.data.stats[1].base_stat,
-          defense: response.data.stats[2].base_stat,
-          specialAttack: response.data.stats[3].base_stat,
-          specialDefense: response.data.stats[4].base_stat,
-          speed: response.data.stats[5].base_stat,
-        });
-      });
+  function addToTeam(){ //button to check whether there is currently a pokemon selected, if so show the team area and add pokemon to it.
+    if (pokemon.name) {
+      setPokemonList([...pokemonList, pokemon]);
+      setPokemon(pokemon);
+      setShowTeam(true);
     }
-    // define fields
-const [pokemonName, setPokemonName] = useState("");
-const [pokemon, setPokemon] = useState({
-      name: "",
-      species: "",
-      type: "",      
-      img: "",
-      imgShiny: "",
-      hp: "",
-      attack: "",
-      defense: "",
-      specialAttack: "",
-      specialDefense: "",
-      speed: "",
-});
+  }  
+  function randomNewPokemon() { // randomize a number between 1 and 1008, put that number in the pokemon api, then get the data from it and store it so it can be called for later on.
+    const min = 1;
+    const max = 1008;
+    const random = Math.floor(Math.random() * (max - min + 1)) + min;
+    setPokemonRandom(random);
+    Axios.get(`https://pokeapi.co/api/v2/pokemon/${random}`).then((response) => {
+      setPokemon({
+        name: response.data.name,
+        species: response.data.species.name,
+        type: response.data.types[0].type.name,
+        img: response.data.sprites.front_default,
+        imgShiny: response.data.sprites.front_shiny,
+        hp: response.data.stats[0].base_stat,
+        attack: response.data.stats[1].base_stat,
+        defense: response.data.stats[2].base_stat,
+        specialAttack: response.data.stats[3].base_stat,
+        specialDefense: response.data.stats[4].base_stat,
+        speed: response.data.stats[5].base_stat,
+      });
+    });
+  }
 // search pokemon in database by name
 const searchPokemon = () => { 
   Axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`).then((response)=>{
@@ -84,15 +64,31 @@ const searchPokemon = () => {
   console.log(`No Pokemon found for ${pokemonName}`);
   });
 };
+    // define fields
+    const [pokemonName, setPokemonName] = useState("");
+    const [pokemon, setPokemon] = useState({
+          name: "",
+          species: "",
+          type: "",      
+          img: "",
+          imgShiny: "",
+          hp: "",
+          attack: "",
+          defense: "",
+          specialAttack: "",
+          specialDefense: "",
+          speed: "",
+    });
 
   return (
+    
     <div className="container">
 
       <Navbar />       
       <div className="home"> 
         <div className="row landing-image">           
           <div className="col-6 mt-6"> 
-            <div className="landing-image-text-field">
+            <div className="landing-image-text-field text-center">
             <h2 className="home-title pt-5">Kies je favoriete Pokemon</h2>
               <div className="row pt-3">
                <div className="col-2"></div>
@@ -106,11 +102,18 @@ const searchPokemon = () => {
           </div> 
         </div>    
 
-      <div className="container pokemon-pokedex pb-5">
-        <div className="row pokemon-pokedex-titel pt-2 pb-2">
-          <div className="col"><h3 className="text-center chosen-pokemon-title">Gekozen Pokemon</h3></div>
+        <div className="container space-between-element-middle">
+          <div className="row space-between-elements-top"></div>
+          <div className="row space-between-elements-bottom"></div>
         </div>
-        <div className="row">
+
+
+      <div className="container pokemon-pokedex ">
+        <div className="row pokemon-pokedex-titel pb-2">
+          <div className="col-4"></div>
+          <div className="col-4 pt-5"><h3 className="text-center chosen-pokemon-title">Gekozen Pokemon</h3></div>
+        </div>
+        <div className="row pb-5">
           <div className="col-3"></div>
           <div className="col-3 mt-5 pokemon-info">
             <ul className="pt-2">
@@ -135,23 +138,44 @@ const searchPokemon = () => {
         </div>
       </div>
 
+      <div className="container space-between-element-middle rotate">
+          <div className="row space-between-elements-top"></div>
+          <div className="row space-between-elements-bottom"></div>
+        </div>
+
       <div className="container pokemon-card-container">
         <div className="row pokemon-pokedex-titel">
+         <div className="col-4"></div>
           {showTeam && (
-          <h3 className="chosen-pokemons text-center chosen-pokemon-title pt-2 pb-2">Dit is je team!</h3>
+         <div className="col-4 pt-4 pb-4"><h3 className="chosen-pokemons text-center chosen-pokemon-title pt-2 pb-2">Dit is je team!</h3></div>
+
           )}
         </div>
         <div className="row">
           {pokemonList.map(pokemon => (          
-            <div className="col-2 mb-2 mt-2">
-              <div style={{ backgroundColor: getColorFromType(pokemon.type) }} className="container pokemon-card">
-              <h4 className="text-center pokemon-card-name" >{pokemon.name}</h4>
-              <img id="pokemon-img" className='mx-auto d-block pokemon-card-image' alt="" src={pokemon.img}/>
-              </div>
+            <div style={{ backgroundColor: getColorFromType(pokemon.type) }} className="col-2 mb-4 mt-2 pokemon-card ">
+               <h4 className="text-center pokemon-card-name mt-3" >{pokemon.name}</h4>             
+               <img id="pokemon-img" className='mx-auto d-block pokemon-card-image' alt="" src={pokemon.img}/>
+              
+                <div className="row mt-3">
+                  <div className="col-6">
+                  <h6 className="pokemon-card-attack-value text-center"> {pokemon.attack}</h6>
+                  <p className="pokemon-card-attack text-center">ATTACK</p>
+                  </div>
+                  <div className="col-6">
+                    <h6 className="pokemon-card-hitpoints-value text-center"> {pokemon.hp}</h6>
+                    <p className="pokemon-card-hitpoints text-center">HITPOINTS</p>
+                  </div>
+                </div>
+
             </div>         
           ))}
         </div>
       </div>
+
+      
+
+
       <Footer />
     </div>
 

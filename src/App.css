@@ -16,7 +16,7 @@
 }
 body {
   background-image: url(https://pokemondeal.com/wp-content/uploads/2020/12/Pokeball-wallpaper.jpg)!important;
-  background-size: contain;
+  background-size: cover;
 }
 .App-header {
   background-color: #282c34;
@@ -41,7 +41,7 @@ body {
 .landing-image-text-field {
   background-color: #3399ffb5;
   border-radius: 0px 25px 25px 0px;
-  border: 2px solid #FFCB05;
+  border: 2px solid #ce2211;
   border-left: none;
   padding: 10px;
 }
@@ -51,19 +51,24 @@ body {
 .chosen-pokemon-title {
   text-shadow: 2px 1px black;
   margin: 0;
+  background-color: #ce2211;
+  border-radius: 25px;
+  padding: 5px;
+  box-shadow: 0 4px 2px -4px black;  
+
 }
 .row.pokemon-pokedex-titel.pt-2.pb-2 {
-  box-shadow: 0 4px 2px -4px black;  
 }
 .container.pokemon-pokedex.pb-5 {
   box-shadow: 0 4px 2px -4px black;  
 }
 .pokemon-pokedex {
-  background-color: #FFCB05;
+  background-image: url(https://assets.pokemon.com//assets/cms2/img/misc/virtual-backgrounds/masters/forest.jpg);
+  background-size: cover;
+  background-position: bottom;
 }
 .pokemon-pokedex-titel {
-  color: #fff;
-  background-color: #3399FF;
+  color: #fff;  
 }
 .pokemon-info, .pokemon-stats, .pokemon-info ul, .pokemon-stats ul  {
     text-transform: capitalize;
@@ -92,9 +97,13 @@ body {
   width: 175px;
 }
 .pokemon-card {
-  background-color: #7777FF;
   border-radius: 15px;
-  border: 4px solid black;
+  border: 1px solid black;
+  border-radius: 15px;
+  height: 260px;
+  -webkit-box-shadow:inset 0px 0px 0px 7px #FFCB05;
+    -moz-box-shadow:inset 0px 0px 0px 7px #FFCB05;
+    box-shadow:inset 0px 0px 0px 7px #FFCB05;
 }
 .pokemon-card-name {
   text-transform: capitalize;
@@ -102,11 +111,16 @@ body {
   text-shadow: 2px 1px black;
 }
 .pokemon-card-image {
-  width: 106%;
-  height: 80%;
+  width: auto;
+  height: 50%;
 }
 .pokemon-card-container {
-  background-color: #ffcb057d;
+ /* background-color: #ffcb057d; */
+ padding: 0px 100px 0px 100px;
+ background-image: url(https://www.pangea.global/wp-content/uploads/2022/08/8.30.2022_B5.jpg);
+ background-position: bottom;
+ background-size: cover;
+ padding: 0px 100px 0px 100px;
 }
 @import url(//db.onlinewebfonts.com/c/d2d21cf0ee4c1d969d8a4dccc587ab26?family=Flexo+Medium);
 .home {
@@ -118,4 +132,45 @@ body {
     color: #fff;
     text-shadow: 2px 1px black;
     font-family: "Flexo-Medium",arial,sans-serif;
+}
+.pokemon-card-background {
+  background-color: yellow;
+  background-color: red;
+  
+}
+.pokemon-card-attack, .pokemon-card-hitpoints, .pokemon-card-attack-value, .pokemon-card-hitpoints-value {
+  color: #fff;
+  text-shadow: 2px 1px black;
+  margin: 1px;
+}
+.pokemon-card-attack, .pokemon-card-hitpoints {
+  font-size: small;
+  padding: 0;
+}
+
+.space-between-elements-top {
+  height: 100px;
+  border-radius: 5px;
+  background-color: #CE2211;
+  --top: 
+   linear-gradient(#000 0 0) top/100% calc(100% - 50px) no-repeat,
+   radial-gradient(farthest-side,#000 98%,#0000) bottom/100px 100px no-repeat;
+  -webkit-mask: var(--top);
+          mask: var(--top);
+}
+.space-between-elements-bottom {
+  height: 75px;
+  border-radius: 5px;
+  background-color: #FFFFFF;
+  --bottom: radial-gradient(calc(10px + 50px) at 50% -10px,#0000 98%,#000);
+  -webkit-mask: var(--bottom);
+          mask: var(--bottom);
+  margin-top: -40px;
+}
+.space-between-element-middle {
+  background-color: #000000;
+  border-radius: 5px;
+}
+.rotate-180 {
+  transform: rotate(180deg);
 }
