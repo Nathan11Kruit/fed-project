@@ -107,7 +107,6 @@ const searchPokemon = () => {
           <div className="row space-between-elements-bottom"></div>
         </div>
 
-
       <div className="container pokemon-pokedex ">
         <div className="row pokemon-pokedex-titel pb-2">
           <div className="col-4"></div>
@@ -139,9 +138,9 @@ const searchPokemon = () => {
       </div>
 
       <div className="container space-between-element-middle rotate">
-          <div className="row space-between-elements-top"></div>
-          <div className="row space-between-elements-bottom"></div>
-        </div>
+        <div className="row space-between-elements-top"></div>
+        <div className="row space-between-elements-bottom"></div>
+      </div>
 
       <div className="container pokemon-card-container">
         <div className="row pokemon-pokedex-titel">
@@ -167,14 +166,17 @@ const searchPokemon = () => {
                     <p className="pokemon-card-hitpoints text-center">HITPOINTS</p>
                   </div>
                 </div>
-
             </div>         
           ))}
         </div>
       </div>
 
-      
-
+      {showTeam && (
+      <div className="container space-between-element-middle">
+        <div className="row space-between-elements-top"></div>
+        <div className="row space-between-elements-bottom"></div>
+      </div>
+          )}
 
       <Footer />
     </div>
