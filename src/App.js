@@ -3,8 +3,8 @@ import "./navbar.css";
 import "./home.css";
 import "./footer.css";
 
-import Navbar from './navbar';
-import { getNumberFromImageSource, shinySwitch, normalSwitch } from './buttons.js';
+import Navbar from './Navbar';
+import { getNumberFromImageSource, shinySwitch, normalSwitch, getColorFromType } from './utilities.js';
 
 import Home from './Home';
 import Footer from './Footer';
@@ -14,8 +14,6 @@ import Axios from 'axios';
 
 
 function App() { 
-
-
 
   const [showTeam, setShowTeam] = useState(false);
   const [pokemonList, setPokemonList] = useState([]);
@@ -51,8 +49,6 @@ function App() {
         });
       });
     }
-
-
     // define fields
 const [pokemonName, setPokemonName] = useState("");
 const [pokemon, setPokemon] = useState({
@@ -90,51 +86,10 @@ const searchPokemon = () => {
   console.log(`No Pokemon found for ${pokemonName}`);
   });
 };
-function getColorFromType(type) {
-  switch (type) {
-    case "normal":
-      return "#A8A878";
-    case "fire":
-      return "#F08030";
-    case "water":
-      return "#6890F0";
-    case "grass":
-      return "#78C850";
-    case "electric":
-      return "#F8D030";
-    case "ice":
-      return "#98D8D8";
-    case "fighting":
-      return "#C03028";
-    case "poison":
-      return "#A040A0";
-    case "ground":
-      return "#E0C068";
-    case "flying":
-      return "#A890F0";
-    case "psychic":
-      return "#F85888";
-    case "bug":
-      return "#A8B820";
-    case "rock":
-      return "#B8A038";
-    case "ghost":
-      return "#705898";
-    case "dragon":
-      return "#7038F8";
-    case "dark":
-      return "#705848";
-    case "steel":
-      return "#B8B8D0";
-    case "fairy":
-      return "#EE99AC";
-    default:
-      return "#68A090";
-  }
-}
+
   return (
     <div className="container">
-     <div className="App">    
+
       <Navbar />       
       <div className="home"> 
         <div className="row landing-image">           
@@ -151,8 +106,8 @@ function getColorFromType(type) {
              </div> 
             </div>
           </div> 
-        </div>            
-      </div>
+        </div>    
+
       <div className="container pokemon-pokedex pb-5">
         <div className="row pokemon-pokedex-titel pt-2 pb-2">
           <div className="col"><h3 className="text-center chosen-pokemon-title">Gekozen Pokemon</h3></div>
@@ -179,30 +134,26 @@ function getColorFromType(type) {
               <li className="pokemon-stats-list-item pokemon-type">Type: {pokemon.type}</li>
             </ul>
           </div>    
+        </div>
       </div>
-    </div>
-    <div className="container pokemon-card-container">
-      <div className="row pokemon-pokedex-titel">
-      {showTeam && (
-      <h3 className="chosen-pokemons text-center chosen-pokemon-title pt-2 pb-2">Dit is je team!</h3>
-      )}
-      </div>
-      <div className="row">
-        {pokemonList.map(pokemon => (
-          
-          <div className="col-2 mb-2 mt-2">
-            <div style={{ backgroundColor: getColorFromType(pokemon.type) }} className="container pokemon-card">
 
-
-            <h4 className="text-center pokemon-card-name" >{pokemon.name}</h4>
-            <img id="pokemon-img" className='mx-auto d-block pokemon-card-image' alt="" src={pokemon.img}/>
-         </div>
-            </div>
-        
-            
-        ))}
+      <div className="container pokemon-card-container">
+        <div className="row pokemon-pokedex-titel">
+          {showTeam && (
+          <h3 className="chosen-pokemons text-center chosen-pokemon-title pt-2 pb-2">Dit is je team!</h3>
+          )}
+        </div>
+        <div className="row">
+          {pokemonList.map(pokemon => (          
+            <div className="col-2 mb-2 mt-2">
+              <div style={{ backgroundColor: getColorFromType(pokemon.type) }} className="container pokemon-card">
+              <h4 className="text-center pokemon-card-name" >{pokemon.name}</h4>
+              <img id="pokemon-img" className='mx-auto d-block pokemon-card-image' alt="" src={pokemon.img}/>
+              </div>
+            </div>         
+          ))}
+        </div>
       </div>
-    </div>
       <Footer />
     </div>
 
