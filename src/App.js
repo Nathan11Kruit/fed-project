@@ -1,12 +1,10 @@
 import './App.css';
 import "./navbar.css";
-import "./home.css";
 import "./footer.css";
 
 import Navbar from './Navbar';
 import { getNumberFromImageSource, shinySwitch, normalSwitch, getColorFromType } from './utilities.js';
 
-import Home from './Home';
 import Footer from './Footer';
 import { useState } from 'react'; 
 import Axios from 'axios';
