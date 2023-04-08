@@ -2,18 +2,23 @@
     background-color: #333;
     color: #fff;
 }
+
 .footer-socials {
     border-right: 1px solid white;
 }
+
 .footer-places {
     border-left: 1px solid white;
 }
-.pokemon-places, .useful-links {
+
+.pokemon-places,
+.useful-links {
     list-style-type: none;
     padding: 0;
     padding-left: 5px;
     font-size: 12px;
 }
+
 .copyright {
     font-size: 10px;
     border-top: 1px solid white;

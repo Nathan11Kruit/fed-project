@@ -1,23 +1,28 @@
 .App {
   text-align: center;
 }
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
+
 /* extra margins and padding*/
 .mt-6 {
-  margin-top: 133px; 
+  margin-top: 133px;
 }
+
 body {
-  background-image: url(https://pokemondeal.com/wp-content/uploads/2020/12/Pokeball-wallpaper.jpg)!important;
+  background-image: url(https://pokemondeal.com/wp-content/uploads/2020/12/Pokeball-wallpaper.jpg) !important;
   background-size: cover;
 }
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -28,16 +33,20 @@ body {
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
 .switch {
   margin-left: 15px;
   width: 80px;
 }
+
 .App-link {
   color: #61dafb;
 }
+
 .landing-image {
   height: 600px;
 }
+
 .landing-image-text-field {
   background-color: #3399ffb5;
   border-radius: 0px 25px 25px 0px;
@@ -45,106 +54,132 @@ body {
   border-left: none;
   padding: 10px;
 }
+
 .pokemon-name-input {
   width: 250px;
 }
+
 .chosen-pokemon-title {
   text-shadow: 2px 1px black;
   margin: 0;
   background-color: #ce2211;
   border-radius: 25px;
   padding: 5px;
-  box-shadow: 0 4px 2px -4px black;  
+  box-shadow: 0 4px 2px -4px black;
 
 }
-.row.pokemon-pokedex-titel.pt-2.pb-2 {
-}
+
 .container.pokemon-pokedex.pb-5 {
-  box-shadow: 0 4px 2px -4px black;  
+  box-shadow: 0 4px 2px -4px black;
 }
+
 .pokemon-pokedex {
   background-image: url(https://assets.pokemon.com//assets/cms2/img/misc/virtual-backgrounds/masters/forest.jpg);
   background-size: cover;
   background-position: bottom;
 }
+
 .pokemon-pokedex-titel {
-  color: #fff;  
+  color: #fff;
 }
-.pokemon-info, .pokemon-stats, .pokemon-info ul, .pokemon-stats ul  {
-    text-transform: capitalize;
-    list-style: none!important;
-    border-radius: 25px;
-    min-height: 325px;
-    padding: 0;
-    font-weight: bold;
-    color: #fff;
-    text-shadow: 2px 1px black;
+
+.pokemon-info,
+.pokemon-stats,
+.pokemon-info ul,
+.pokemon-stats ul {
+  text-transform: capitalize;
+  list-style: none !important;
+  border-radius: 25px;
+  min-height: 325px;
+  padding: 0;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 1px black;
 }
+
 .pokemon-info {
   background-color: #D5A100;
   height: 395px;
 }
+
 .pokemon-stats {
-    background-color: #FF4422;
-    text-align: left;    
+  background-color: #FF4422;
+  text-align: left;
 }
+
 .pokemon-stats-list-item {
   padding: 10px 1px 1px 40px;
 }
+
 .btn-primary {
-  background-color: #7777FF!important;
+  background-color: #7777FF !important;
 }
+
 .btn-add-to-team {
   width: 175px;
 }
+
 .pokemon-card {
   border-radius: 15px;
   border: 1px solid black;
   border-radius: 15px;
   height: 260px;
-  -webkit-box-shadow:inset 0px 0px 0px 7px #FFCB05;
-    -moz-box-shadow:inset 0px 0px 0px 7px #FFCB05;
-    box-shadow:inset 0px 0px 0px 7px #FFCB05;
+  -webkit-box-shadow: inset 0px 0px 0px 7px #FFCB05;
+  -moz-box-shadow: inset 0px 0px 0px 7px #FFCB05;
+  box-shadow: inset 0px 0px 0px 7px #FFCB05;
 }
+
 .pokemon-card-name {
   text-transform: capitalize;
   color: #fff;
   text-shadow: 2px 1px black;
 }
+
 .pokemon-card-image {
   width: auto;
   height: 50%;
 }
+
 .pokemon-card-container {
- /* background-color: #ffcb057d; */
- padding: 0px 100px 0px 100px;
- background-image: url(https://www.pangea.global/wp-content/uploads/2022/08/8.30.2022_B5.jpg);
- background-position: bottom;
- background-size: cover;
- padding: 0px 100px 0px 100px;
+  /* background-color: #ffcb057d; */
+  padding: 0px 100px 0px 100px;
+  background-image: url(https://www.pangea.global/wp-content/uploads/2022/08/8.30.2022_B5.jpg);
+  background-position: bottom;
+  background-size: cover;
+  padding: 0px 100px 0px 100px;
 }
+
 @import url(//db.onlinewebfonts.com/c/d2d21cf0ee4c1d969d8a4dccc587ab26?family=Flexo+Medium);
+
 .home {
-    height: 641px;
-    background-image: url(https://static.onecms.io/wp-content/uploads/sites/6/2022/12/16/Pokemon-121622-1.jpg);
-    background-size: cover;
+  height: 641px;
+  background-image: url(https://static.onecms.io/wp-content/uploads/sites/6/2022/12/16/Pokemon-121622-1.jpg);
+  background-size: cover;
 }
+
 .home h2 {
-    color: #fff;
-    text-shadow: 2px 1px black;
-    font-family: "Flexo-Medium",arial,sans-serif;
+  color: #fff;
+  text-shadow: 2px 1px black;
+  font-family: "Flexo-Medium", arial, sans-serif;
 }
+
 .pokemon-card-background {
   background-color: yellow;
   background-color: red;
-  
+
 }
-.pokemon-card-attack, .pokemon-card-hitpoints, .pokemon-card-attack-value, .pokemon-card-hitpoints-value {
+
+.pokemon-card-attack,
+.pokemon-card-hitpoints,
+.pokemon-card-attack-value,
+.pokemon-card-hitpoints-value {
   color: #fff;
   text-shadow: 2px 1px black;
   margin: 1px;
 }
-.pokemon-card-attack, .pokemon-card-hitpoints {
+
+.pokemon-card-attack,
+.pokemon-card-hitpoints {
   font-size: small;
   padding: 0;
 }
@@ -153,25 +188,28 @@ body {
   height: 100px;
   border-radius: 5px;
   background-color: #CE2211;
-  --top: 
-   linear-gradient(#000 0 0) top/100% calc(100% - 50px) no-repeat,
-   radial-gradient(farthest-side,#000 98%,#0000) bottom/100px 100px no-repeat;
+  --top:
+    linear-gradient(#000 0 0) top/100% calc(100% - 50px) no-repeat,
+    radial-gradient(farthest-side, #000 98%, #0000) bottom/100px 100px no-repeat;
   -webkit-mask: var(--top);
-          mask: var(--top);
+  mask: var(--top);
 }
+
 .space-between-elements-bottom {
   height: 75px;
   border-radius: 5px;
   background-color: #FFFFFF;
-  --bottom: radial-gradient(calc(10px + 50px) at 50% -10px,#0000 98%,#000);
+  --bottom: radial-gradient(calc(10px + 50px) at 50% -10px, #0000 98%, #000);
   -webkit-mask: var(--bottom);
-          mask: var(--bottom);
+  mask: var(--bottom);
   margin-top: -40px;
 }
+
 .space-between-element-middle {
   background-color: #000000;
   border-radius: 5px;
 }
+
 .rotate {
   transform: rotate(180deg);
 }
